@@ -1,0 +1,146 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 1.8em;
+  color: #333;
+  text-align: center;
+}
+
+header p {
+  text-align: center;
+  color: #777;
+  font-size: 1em;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.addItemButton,
+.generateBillButton {
+  display: inline-block;
+  width: 48%;
+  padding: 10px;
+  margin: 5px 1%;
+  font-size: 1em;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addItemButton {
+  background-color: #28a745;
+}
+
+.generateBillButton {
+  background-color: #007bff;
+}
+
+.addItemButton:hover,
+.generateBillButton:hover {
+  opacity: 0.9;
+}
+
+footer p {
+  text-align: center;
+  color: #777;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+/* Container for item rows */
+.itemRow {
+  display: flex;
+  gap: 10px; /* Space between item name, quantity, and price */
+  margin-bottom: 10px;
+}
+
+.itemRow input[type="text"],
+.itemRow input[type="number"] {
+  flex: 1; /* Equal space for item name, quantity, and price fields */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .addItemButton,
+  .generateBillButton {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  form label {
+    font-size: 0.9em;
+  }
+
+  form input[type="text"],
+  form input[type="date"],
+  form input[type="number"] {
+    font-size: 0.9em;
+  }
+
+  footer p {
+    font-size: 0.8em;
+  }
+
+  .itemRow {
+    flex-direction: column; /* Stack item name, quantity, and price on very small screens */
+  }
+}
